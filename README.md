@@ -1,9 +1,8 @@
 
 # Rapport
 
-**Skriv din rapport här!**
-
-_Du kan ta bort all text som finns sedan tidigare_.
+Jag har skapat en appliation som innehåller 4 widgets (3 som inte var med sedan innan.).
+Dessa ligger innuti en tablelayout. Dena strukturerar up allt innehåll i rader och kolumner.
 
 ## Följande grundsyn gäller dugga-svar:
 
@@ -16,20 +15,31 @@ _Du kan ta bort all text som finns sedan tidigare_.
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
 ```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
+<TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        >
+        <TableRow
+            android:layout_height="100dp"
+            android:background="#ff0000"
+            android:layout_marginTop="5dp">
 ```
+Jag har skapat en tablelayout. Denna täcker hela ytan som den ligger i, med hjälp av match_parent.
+Den har även strukterarat upp kolumnerna innuti den så att de tar upp den yta som existerar i raden.
+alla tablerows jag skapar har en margin top för att ge lite utrymme mellan varje rad.
+
+```
+<Button
+    android:id="@+id/my_button"
+    android:background="@drawable/button_border"
+    android:text="@string/button_text"
+    android:onClick="changeProgress"/>
+```
+Min knapp. Den kallar på metoden changeProgress och har en förskapad bakgrund. 
+Denna bakgrund inehåller struktur för att få knappen att ha en borde och se ut som en knapp.
+
+
 
 Bilder läggs i samma mapp som markdown-filen.
 

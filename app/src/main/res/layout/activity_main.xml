@@ -27,8 +27,7 @@
                 android:id="@+id/my_button"
                 android:background="@drawable/button_border"
                 android:text="@string/button_text"
-                android:onClick="changeProgress"
-                />
+                android:onClick="changeProgress"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="50dp">
