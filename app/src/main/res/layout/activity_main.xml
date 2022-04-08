@@ -43,6 +43,14 @@
                 android:layout_span="2"
                 />
         </TableRow>
+        <TableRow
+            android:layout_marginTop="50dp">
+            <CheckBox
+                android:id="@+id/pointlessCheckBox"
+                android:text="@string/pointless"
+                android:layout_gravity="center"
+                android:layout_span="2"/>
+        </TableRow>
     </TableLayout>
 
 
