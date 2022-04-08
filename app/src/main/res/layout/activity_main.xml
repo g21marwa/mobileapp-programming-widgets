@@ -26,9 +26,13 @@
             <Button
                 android:id="@+id/my_button"
                 android:background="@drawable/button_border"
-                android:text="Press me"
+                android:text="@string/button_text"
 
                 />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="50dp">
+            
         </TableRow>
     </TableLayout>
 
