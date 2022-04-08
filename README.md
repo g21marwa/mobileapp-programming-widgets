@@ -4,14 +4,6 @@
 Jag har skapat en appliation som innehåller 4 widgets (3 som inte var med sedan innan.).
 Dessa ligger innuti en tablelayout. Dena strukturerar up allt innehåll i rader och kolumner.
 
-## Följande grundsyn gäller dugga-svar:
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
 ```
@@ -38,15 +30,40 @@ alla tablerows jag skapar har en margin top för att ge lite utrymme mellan varj
 ```
 Min knapp. Den kallar på metoden changeProgress och har en förskapad bakgrund. 
 Denna bakgrund inehåller struktur för att få knappen att ha en borde och se ut som en knapp.
+```
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorPrimaryDark"/>
+    <stroke android:color="@color/colorPrimary"
+        android:width="3dp"/>
+</shape>
+```
+Border för knappen
+
+```
+<ProgressBar
+    android:id="@+id/progressbar"
+    android:minWidth="1000dp"
+    android:layout_height="50dp"
+    style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+    android:layout_gravity="center"
+    android:progress="0"
+    android:background="#0000ff"
+    android:layout_span="2"
+    />
+```
+Detta är en progressbar som har en span på 2 kolumner. Den är centrerad och en width så den täcker hela skärmen.
+Det finns en definerad style på progressbaren. Den är då hoizontel och har en bar horizontellt.
+
+```
+<CheckBox
+    android:id="@+id/pointlessCheckBox"
+    android:text="@string/pointless"
+    android:layout_gravity="center"
+    android:layout_span="2"/>
+```
+Och här har vi en checkbox som ine gör någonting. Den är centrerad och ligger över 2 kolumner.
 
 
-
-Bilder läggs i samma mapp som markdown-filen.
-
-![](android.png)
-
-Läs gärna:
-
-- Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
-- Wunsche, B.C. (2013) A smartphone-based golf simulation exercise game for supporting arthritis patients. 2013 28th International Conference of Image and Vision Computing New Zealand (IVCNZ), IEEE, pp. 459–464.
-- Wohlin, C., Runeson, P., Höst, M., Ohlsson, M.C., Regnell, B., Wesslén, A. (2012) Experimentation in Software Engineering, Berlin, Heidelberg: Springer Berlin Heidelberg.
+![](screenshot1.png)
+Såhär ser appen ut.
